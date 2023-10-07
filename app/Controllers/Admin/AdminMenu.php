@@ -54,7 +54,7 @@ class AdminMenu
     public function wp_media_page_callback()
     {
        // echo '<div class="wrap"><div id="boilerplate_root">Hello</div></div>';
-       echo "<div class='wrapper`'>";
+       echo "<div class='wrapper'>";
           require_once BPR_PATH . 'php/index.php';
        echo "</div>";
     
