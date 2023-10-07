@@ -117,13 +117,13 @@ if ( ! class_exists( Cptint::class ) ) {
 
 			do_action( 'boilerplate/before_loaded' );
 
-      Review::instance();
+    //  Review::instance();
 			// Include File.
-			AssetsController::instance();
+			//AssetsController::instance();
 			AdminMenu::instance();
-			FilterHooks::init_hooks();
-			ActionHooks::init_hooks();
-			Api::instance();
+		//	FilterHooks::init_hooks();
+			//ActionHooks::init_hooks();
+			// Api::instance();
 
 			do_action( 'boilerplate/after_loaded' );
 		}
