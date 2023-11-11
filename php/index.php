@@ -1,43 +1,51 @@
 <?php
-$cars = array('Volvo', "BMW", "Toyoto");
-$carsLength = count($cars);
-echo("I love ". $cars[0]. "," . $cars[1]. "," . $cars[2] . "<br>");
-for($i = 0; $i< $carsLength; $i++){
-echo($cars[$i]);
-echo("<br>");
+// echo $_SERVER['PHP_SELF'];
+// echo "<br>";
+// echo $_SERVER['SERVER_NAME'];
+// echo "<br>";
+// echo $_SERVER['HTTP_HOST'];
+// echo "<br>";
+// echo $_SERVER['HTTP_REFERER'];
+// echo "<br>";
+// echo $_SERVER['HTTP_USER_AGENT'];
+// echo "<br>";
+// echo $_SERVER['SCRIPT_NAME'];
+?>
+<?php
+
+date_default_timezone_set("Asia/Dhaka");
+echo("Today is :" . date('d/m/Y'). "<br>");
+echo("Today is :" . date('d-m-y'). "<br>");
+echo("Today is :" . date('d.m.y'). "<br>");
+echo("Today is :" . date('l'). "<br>");
+echo("The time is :" . date('h:m:sa'). "<br>");
+
+?>
+ //Automatic Copyright Year -->
+&copy;2010-
+<?php
+echo date('Y')
+?>
+
+<?php
+$d= strtotime('14 April 2015 11:53am');
+$x= strtotime(' tomorrow ');
+$y= strtotime(' next Saturday ');
+$z= strtotime(' +5 month ');
+echo("Create time is ". date(" Y-m-d h:m:sa ", $d). "<br>");
+echo("Create time is ". date("Y-m-d h:m:sa", $x). "<br>");
+echo("Create time is ". date("Y-m-d h:m:sa", $y). "<br>");
+echo("Create time is ". date("Y-m-d h:m:sa", $z). "<br>");
+?>
+<?php
+$startdate = strtotime('sunday');
+$endDay = strtotime("+5 week",$startdate );
+while($startdate< $endDay){
+  echo( date("M d", $startdate). "<br>");
+  $startdate = strtotime('+1 week', $startdate);
 }
 ?>
 
 <?php
- $age = array("Mehedi"=>"23", "Ben"=>"30","Forhad" =>"22", "Ahosan" =>"23");
- echo("Mehedi is ". $age["Mehedi"] . " years old ." . "<br>");
-
- foreach($age as $x=>$value){
-  echo $x ." is " . $value . " years old .";
-  echo "<br>";
- }
-?>
-
-<?php
-$cars = array(
-  array("Volvo" ,10 , 25),
-  array("BMW" ,15 , 30),
-  array("Land Rover" ,5 , 20)
-);
-$carsLength = count($cars);
-
-echo $cars[0][0] . ": In Stock :" . $cars[0][1] . ", Sold :" . $cars[0][2] . "<br>";
-// echo $cars[1][0] . ": In Stock :" . $cars[1][1] . ", Sold :" . $cars[1][2]. "<br>";
-// echo $cars[2][0] . ": In Stock :" . $cars[2][1] . ", Sold :" . $cars[2][2]. "<br>";
-
-for($i =0; $i< 3; $i++){
-echo "<p><b>Row number $i</b></p>";
-echo("<ul>");
-for($j = 0; $j<3; $j++){
-   echo "<li>".$cars[$i][$j]."</li>";
-  
-}
-echo("</ul>");
-}
-
+include footer.php;
 ?>
